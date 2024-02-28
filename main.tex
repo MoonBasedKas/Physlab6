@@ -1,0 +1,119 @@
+\documentclass[10pt]{article}
+\setlength{\parindent}{0pt}
+% \usepackage{setspace} \doublespacing
+\usepackage[a4paper, total={6.3in, 9in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+
+% A custom title generation command for physics labs.
+\newcommand{\PLtitle}{\setlength{\parindent}{0pt}
+\begin{center}
+
+  \huge{\textbf{Lab \Lab: \Ltitle\\}}
+  \normalsize 
+
+  Physics 1320L-02 \\
+  TA: \TA \\
+  Date: \date\\
+  Name: \author\\
+  
+  Team: \team\\
+
+
+\end{center}
+}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Defining variables for PLtitle
+\def\Lab{6}
+\def\Ltitle{Capacitors}
+\def\author{Kassidy Maberry}
+\def\team{Lukas Chavez}
+\def\TA{Jonathan Dooley}
+\def\date{2024/03/25}
+% Defining a variable for creating tabs since writing \hspace*{10mm} is tedious.
+\def\tab{\hspace*{10mm}}
+\def\halftab{\hspace*{5mm}}
+
+\begin{document}
+% Generate title
+\PLtitle
+
+% --- Introduction --- % 
+\section{Introduction}
+
+% --- Methods --- %
+\section{Methods}
+
+
+% --- Data --- %
+\section{Data}
+
+% --- Analysis --- %
+\section{Analysis}
+\subsection*{Effective Capacitance}
+
+%1. Calculate and record your theoretical effective series capacitance and the theoretical effective parallel
+%capacitance for the capacitors used.
+
+%2. Compare your experimental values to your theoretical values and obtain the percentage difference
+% between both.
+
+\subsection*{Parallel Plate Capacitor}
+
+% 1.Plot the capacitance of acrylic, Cacrylic, versus the capacitance of air, Cair.
+
+% 2.Use this plot and Equation 4 to determine the dielectric constant, κ, for acrylic. (Try to figure it
+% out yourself first, then ask your instructor as needed.) Be sure to explain your work.
+
+\subsection*{Cylindrical Capacitor}
+
+% 1.Find the theoretical value for the capacitance of the cylindrical capacitor
+
+% 2.Compare the theoretical and experimental values of capacitance for the cylindrical capacitor using
+% percent error.
+
+
+% 3.Use Gauss's Law to outline the derivation of the concentric cylinder capacitor without dielectric
+% eq(5).
+
+
+% --- Conclusion --- %
+\section{Discussion and Conclusion}
+
+
+% --- Appendix
+\section*{Appendix}\newpage
+\includepdf[pages={1-3}]{Data.pdf}
+
+
+% Insert PDF
+\end{document}
