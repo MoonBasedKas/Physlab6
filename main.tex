@@ -138,11 +138,37 @@ $C = 163.42$pF\\
 \section{Analysis}
 \subsection*{Effective Capacitance}
 
-%1. Calculate and record your theoretical effective series capacitance and the theoretical effective parallel
-%capacitance for the capacitors used.
+To determine the theoretical capacitance of the parrallel 
+circuit we will use Equation~\ref*{SCC}
 
-%2. Compare your experimental values to your theoretical values and obtain the percentage difference
-% between both.
+\begin{equation}\label{SCC}
+  C_{eff} = C_{1} + C_{2}
+\end{equation}
+
+Plugging in we get a $C_{eff} = 101.362$pF.\\
+Then to determine the theoretical capacitance of the series 
+circuit we will use Equation~\ref*{PCC}.\\
+
+\begin{equation}\label{PCC}
+  \frac{1}{C_{eff}} = \frac{1}{C_{1}} + \frac{1}{C_{2}}
+\end{equation}
+We will need to rearrange this equation to solve for $C_{eff}$.\\
+$C_{eff} = \frac{1}{\frac{1}{C_{1}} + \frac{1}{C_{2}}}$
+
+Plugging in we get a $C_{eff} = 9.26$pF.\\
+
+Comparing to our measured values we see that the
+measurements are close to the theoretical values.
+Calculating the percent error using Equation~\ref*{Pe}.\\
+
+\begin{equation}\label{Pe}
+  P_{e} = \frac{|P_{theoretical} - P_{measured}|}{P_{theoretical}} * 100 \%
+\end{equation}
+
+Giving us a percent error for the parrallel capacitor $P_{e} = 0.002\%$.\\
+Then giving us a percent error for the parrallel capacitor $P_{e} = 0.22\%$.\\
+Seeing how low the percent error for both this could be assumed to be the inaccuracy of our
+measurement devices.\\
 
 \subsection*{Parallel Plate Capacitor}
 
