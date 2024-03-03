@@ -220,19 +220,85 @@ Comparing this to our measured values using equation \ref*{Pe} we get a $P_{e} =
 
 % 3.Use Gauss's Law to outline the derivation of the concentric cylinder capacitor without dielectric
 % eq(5).
-
+[Insert derivation]
 
 
 % --- Questions --- %
 \section{Questions}
+\begin{enumerate}
+  \item Suppose that you suspect that the dielectric constant for air is not really one; describe how
+  would you use your data from section 6.4.1 to determine $k_{air}$. Assume that the movable
+  metallic plates have a perfect circular shape.\\
+
+  To determine this we can use equation~\ref*{dik}. As we know the capacitance, distance, and the area
+  we could then solve for $k_{air}$. In the following equation:
+  \begin{equation}
+    k_{air} = \frac{Cd}{\epsilon_{oA}}
+  \end{equation}
+\end{enumerate}
 
 % --- Conclusion --- %
 \section{Discussion and Conclusion}
-
-
-% --- Appendix
+In this lab, we learned about capacitors and how capacitance varies through the capacitor's shape,
+the material inbetween the plates, and how the arrangement of capacitors affects capacitance. Using 
+different materials you can achieve a higher capacitance than you could using air. We had minimal error 
+for the parallel plate capacitor and circuits all being less than $10\%$. The circuit errors could be 
+due to inaccuracy with our measuring tools. The parrallel plate could be since the acrylic we used 
+was not circular. The cylindrical capacitor had a massive margin of error being over $100\%$. This 
+could be due to defects in the capacitor or us improperly setting up the capacitor and measuring 
+incorrectly.\\
+% --- Appendix ---
 \section*{Appendix}\newpage
 \includepdf[pages={1-3}]{Data.pdf}
+All code was generated with the following snippets of python code.]
+
+\begin{lstlisting}[language=Python, caption={Python code for generating Capacitance of air vs Acrylic}]
+
+def Capactiance(x,y):
+  plot = plt.subplot()
+
+
+  const = trendline(x,y)
+  print(const)
+  trendy = []
+  for i in x:
+      trendy.append(const * i)
+  print(const)
+
+  plot.set_title("Capacitance Acrylic vs Air Capacitance.")
+  plt.plot(x,trendy,"r--", label="Slope = {}F/m".format(round(const,2)))
+  plot.legend()
+
+  plot.set_xlabel("Capacitance of Air (pF)")
+  plot.set_ylabel("Capacitance of Acrylic (pF)")
+
+  plot.scatter(x,y)
+  plt.show()  
+
+  \end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Python code for generating the slope of the trend line}]
+
+def trendline(x, y):
+    xbar = 0
+    ybar = 0
+    num = 0
+    den = 0
+
+    for i in range(len(x)):
+        xbar += x[i]
+        ybar += y[i]
+    xbar /= len(x)
+    ybar /= len(y)
+
+    for i in range(len(x)):
+        num = (x[i] - xbar) * (y[i] - ybar)
+        den = (x[i] - xbar)**2
+        print(num, den)
+
+    return num/den
+
+  \end{lstlisting}
 
 
 % Insert PDF
