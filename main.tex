@@ -220,8 +220,33 @@ Comparing this to our measured values using equation \ref*{Pe} we get a $P_{e} =
 
 % 3.Use Gauss's Law to outline the derivation of the concentric cylinder capacitor without dielectric
 % eq(5).
-[Insert derivation]
+To derive equation \ref*{CCeq} we will use Equation \ref*{Cap}.\\
+\begin{equation}\label*{Cap}
+  C = \frac{q}{V}
+\end{equation}
+Then we will solve for v in terms of Equation \ref*{Volt}.\\
+\begin{equation}\label{Volt}
+  V = \int_{a}^{b}(E)dr
+\end{equation}
 
+Then we will use one last equation being Equation~\ref*{Guass}.\\
+\begin{equation}\ref*{Guass}
+  \frac{q}{\epsilon_{o}} = EA
+\end{equation}
+
+Solving for E in equation \ref*{Guass}:\\
+$E = \frac{q}{A\epsilon_{o}}$.\\
+Since $A = 2\pi rl$ then $E = \frac{q}{2\pi rl\epsilon_{o}}$
+Then plugging E into~\ref*{Volt}:\\
+$V = \int_{a}^{b}\frac{q}{2\pi rl\epsilon_{o}} dr$\\
+$V = \frac{q}{2\pi l\epsilon_{o}} [_{b}^{a}ln(r)]$\\
+$V = \frac{q}{2\pi l\epsilon_{o}} [ln(b) - ln(a)] = \frac{q}{2\pi l\epsilon_{o}} (ln(\frac{b}{a}))$.\\
+Now that we've obtained V we can now plug V into Equation~\ref*{Cap}.\\
+$C = \frac{q}{\frac{q}{2\pi l\epsilon_{o}} (ln(\frac{b}{a}))}$.\\
+Now cleaning up we get Equation~\ref*{fin}\\
+\begin{equation}\label{fin}
+  C = \frac{2\pi\epsilon_{o}L}{\ln(\frac{b}{a})}
+\end{equation}
 
 % --- Questions --- %
 \section{Questions}
