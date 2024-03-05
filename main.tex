@@ -139,7 +139,7 @@ $C = 163.42$pF\\
 \subsection*{Effective Capacitance}
 
 To determine the theoretical capacitance of the parrallel 
-circuit we will use Equation~\ref*{SCC}
+circuit we will use Equation \ref{SCC}
 
 \begin{equation}\label{SCC}
   C_{eff} = C_{1} + C_{2}
@@ -186,13 +186,13 @@ Plotting this we get the following figure.
 
 % 2.Use this plot and Equation 4 to determine the dielectric constant, κ, for acrylic. (Try to figure it
 % out yourself first, then ask your instructor as needed.) Be sure to explain your work.
-To determine the dielectric constant we will use Equation \ref*{dik}
+To determine the dielectric constant we will use Equation \ref{dik}.\\
 \begin{equation}\label{dik}
   C = k\epsilon_{o}\frac{A}{d}
 \end{equation}
 As the only variable in this equation that changes is k. Then the dielectric constants
-can be written as a ratio of the capacitance. Giving us equation \ref*{dikr}
-\begin{equation}\ref*{dikr}
+can be written as a ratio of the capacitance. Giving us equation \ref{dikr}.\\
+\begin{equation}\label{dikr}
   \frac{C_{acrylic}}{C_{air}} = \frac{k_{acrylic}}{k_{air}}
 \end{equation}
 As we know the dielectric constant of air is $k_{air} = 1$F/m then our equation is now.\\
@@ -206,45 +206,45 @@ We will take the average of these two giving us a final $k_{acrylic} = 2.28$F/m.
 
 % 1.Find the theoretical value for the capacitance of the cylindrical capacitor
 First let's determine the theoretical capacitance of the cylindrical capacitor. We can 
-determine this by using equation~\ref*{CCeq}
+determine this by using equation \ref{CCeq}.\\
 
 \begin{equation}\label{CCeq}
   C = \frac{2\pi k \epsilon_{o}L}{\ln(\frac{b}{a})}
 \end{equation}
 Where a is the inner radius, b is the outer radius, k is the dielectric constant, and L is the length of the capacitor. 
 Assuming our dielectric constant is the same constant we measured for the parrallel plate capacitance of $k = 2.28$F/m.
-Plugging in we get the following $C = 2.88 10^{-11}\text{F} = 28.8\text{pF}$.\\
+Plugging in we get the following $C = 2.88 10^{-11}\mathrm{F} = 28.8\mathrm{pF}$.\\
 % 2.Compare the theoretical and experimental values of capacitance for the cylindrical capacitor using
 % percent error.
-Comparing this to our measured values using equation \ref*{Pe} we get a $P_{e} = 480\%$.\\
+Comparing this to our measured values using equation \ref{Pe} we get a $P_{e} = 480\%$.\\
 
 % 3.Use Gauss's Law to outline the derivation of the concentric cylinder capacitor without dielectric
 % eq(5).
-To derive equation \ref*{CCeq} we will use Equation \ref*{Cap}.\\
-\begin{equation}\label*{Cap}
+To derive Equation \ref{CCeq} we will use Equation~\ref{Cap}.\\
+\begin{equation}\label{Cap}
   C = \frac{q}{V}
 \end{equation}
-Then we will solve for v in terms of Equation \ref*{Volt}.\\
+Then we will solve for v in terms of Equation \ref{Volt}.\\
 \begin{equation}\label{Volt}
   V = \int_{a}^{b}(E)dr
 \end{equation}
 
-Then we will use one last equation being Equation~\ref*{Guass}.\\
-\begin{equation}\ref*{Guass}
+Then we will use one last equation being Equation~\ref{Guass}.\\
+\begin{equation}\label{Guass}
   \frac{q}{\epsilon_{o}} = EA
 \end{equation}
 
-Solving for E in equation \ref*{Guass}:\\
+Solving for E in Equation \ref{Guass}:\\
 $E = \frac{q}{A\epsilon_{o}}$.\\
-Then $A = 2\pi rl$ since the ends of the capacitance are not enclosed.\\
-Then $E = \frac{q}{2\pi rl\epsilon_{o}}$
-Plugging E into~\ref*{Volt}:\\
-$V = \int_{a}^{b}\frac{q}{2\pi rl\epsilon_{o}} dr$\\
-$V = \frac{q}{2\pi l\epsilon_{o}} [_{b}^{a}ln(r)]$\\
-$V = \frac{q}{2\pi l\epsilon_{o}} [ln(b) - ln(a)] = \frac{q}{2\pi l\epsilon_{o}} (ln(\frac{b}{a}))$.\\
-Now that we've obtained V we can now plug V into Equation~\ref*{Cap}.\\
-$C = \frac{q}{\frac{q}{2\pi l\epsilon_{o}} (ln(\frac{b}{a}))}$.\\
-Now cleaning up we get Equation~\ref*{fin}\\
+Then $A = 2\pi rL$ since the ends of the capacitance are not enclosed.\\
+Then $E = \frac{q}{2\pi rL\epsilon_{o}}$.\\
+Plugging E into~\ref{Volt}:\\
+$V = \int_{a}^{b}\frac{q}{2\pi rL\epsilon_{o}} dr$\\
+$V = \frac{q}{2\pi L\epsilon_{o}} [_{b}^{a}ln(r)]$\\
+$V = \frac{q}{2\pi L\epsilon_{o}} [ln(b) - ln(a)] = \frac{q}{2\pi L\epsilon_{o}} (ln(\frac{b}{a}))$.\\
+Now that we've obtained V we can now plug V into Equation~\ref{Cap}.\\
+$C = \frac{q}{\frac{q}{2\pi L\epsilon_{o}} (ln(\frac{b}{a}))}$.\\
+Now cleaning up we get Equation~\ref{fin}\\
 \begin{equation}\label{fin}
   C = \frac{2\pi\epsilon_{o}L}{\ln(\frac{b}{a})}
 \end{equation}
@@ -257,7 +257,7 @@ As $k = 1$ we do not need to worry about the dielectric constant.\\
   would you use your data from section 6.4.1 to determine $k_{air}$. Assume that the movable
   metallic plates have a perfect circular shape.\\
 
-  To determine this we can use equation~\ref*{dik}. As we know the capacitance, distance, and the area
+  To determine this we can use equation~\ref{dik}. As we know the capacitance, distance, and the area
   we could then solve for $k_{air}$. In the following equation:
   \begin{equation}
     k_{air} = \frac{Cd}{\epsilon_{oA}}
@@ -275,9 +275,9 @@ was not circular. The cylindrical capacitor had a massive margin of error being 
 could be due to defects in the capacitor or us improperly setting up the capacitor and measuring 
 incorrectly.\\
 % --- Appendix ---
-\section*{Appendix}\newpage
-\includepdf[pages={1-3}]{Data.pdf}
-All code was generated with the following snippets of python code.]
+\section*{Appendix}
+
+All code was generated with the following snippets of python code.
 
 \begin{lstlisting}[language=Python, caption={Python code for generating Capacitance of air vs Acrylic}]
 
@@ -329,4 +329,5 @@ def trendline(x, y):
 
 
 % Insert PDF
+\includepdf[pages={1-3}]{Data.pdf}
 \end{document}
